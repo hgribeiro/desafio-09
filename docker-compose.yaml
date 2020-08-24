@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  postgres:
+    container_name: desafio09_postgres
+    build:
+      context: ./Docker
+      dockerfile: postgres.Dockerfile
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+    ports:
+      - "5432:5432"
